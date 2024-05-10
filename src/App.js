@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import Header from "./Component/Header";
+import Whychoose from "./Component/Home";
+import './css/custom-bootstrap.css'
 import './App.css';
-
+import Home from "./Component/Home";
+import Choose from "./Component/Choose";
+import Video from "./Component/Video";
+import { Work } from "./Component/Work";
+import TestimonialSection, { Rating } from "./Component/TestimonialSection";
+import { OurRoute } from "./Component/OurRoute";
+import DownloadApp from "./Component/DownloadApp";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+   <Header/>
+   
+    <Home/>
+    <Choose/>
+    <Video/>
+    <Work/>
+    {/* <TestimonialSection/> */}
+    <OurRoute/>
+    <DownloadApp/>
+    </>
+    
   );
 }
 
