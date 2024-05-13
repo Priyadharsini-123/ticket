@@ -5,7 +5,7 @@ import 'animate.css/animate.min.css'
 const Home = () => {
   return (
     <>
-     <div className="container-xxl position-relative p-0" id="homeDiv">
+     <div className="container-xxl position-relative p-0" id="homeDiv" style={{marginTop:'59px'}}>
       <div className="container-xxl py-5 bg-custom hero-header mb-5">
         <Container className="my-5 py-5 px-lg-5">
           <Row className="g-5 py-5">
