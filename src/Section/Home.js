@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Image, Button } from 'react-bootstrap';
 import Headerimage from '../images/Flawk-Img-17-nove-3-min-e1605893129800.png'
-import 'animate.css/animate.min.css'
+import 'animate.css/animate.min.css';
 const Home = () => {
   return (
     <>

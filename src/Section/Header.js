@@ -1,34 +1,25 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import Logo from "../images/logo.png";
-function Header() {
-  return (
-    <Navbar collapseOnSelect expand="lg"  variant="light" fixed="top" className="shadow navcustom">
-    <div className="container ">
-      {/* Begin Logo */}
-      <Navbar.Brand href="#" className="">
-        <img src={Logo} alt="Yatri" className='img-fluid' style={{maxWidth:'150px', height: 'auto'}} />
-      </Navbar.Brand>
-      {/* End Logo */}
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      {/* Begin Menu */}
-      <Navbar.Collapse id="responsive-navbar-nav" className="custom-navbar-collapse">
-        <Nav className="ml-auto">
-        <Nav.Link href="/pnr-status">Home</Nav.Link>
-          <Nav.Link href="/pnr-status">PNR Status</Nav.Link>
-          <Nav.Link href="/coach-position">Coach Position</Nav.Link>
-          <Nav.Link href="/live-train">Live Train</Nav.Link>
-          <Nav.Link href="/advertisement">Advertise</Nav.Link>
-          <NavDropdown title="More Feature" id="basic-nav-dropdown">
-            <NavDropdown.Item href="/fare" target="_blank">Fare Calculator</NavDropdown.Item>
-            <NavDropdown.Item href="/farecomparsion">Fare Comparsion</NavDropdown.Item>
-            <NavDropdown.Item href="/seatavailablity">Seat Availblity</NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
-      </Navbar.Collapse>
-      {/* End Menu */}
-    </div>
-  </Navbar>
-  );
+import Logo from '../images/logo.png'
+const Navbar = () => {
+    return (
+        <nav className="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 navcustom sticky-top">
+            <a href="/" className="navbar-brand p-0">
+                <h1 className="m-0"><img src={Logo} alt="Logo" /></h1>
+            </a>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span className="fa fa-bars"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarCollapse">
+                <div className="navbar-nav ms-auto py-0">
+                    <a href="/" className="nav-item nav-link active homeLink">Home</a>
+                    <a href="/" className="nav-item nav-link aboutLink">Coach Position</a>
+                    <a href="/" className="nav-item nav-link featuresLink">Pnr Status</a>
+                    <a href="/" className="nav-item nav-link pricingLink"> Live Train</a>
+                </div>
+                <a href="https://www.flawkapp.com/User/register" target="_blank" className="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3" rel="noopener noreferrer">More Feature</a>
+            </div>
+        </nav>
+    );
 }
-export default Header;
+
+export default Navbar;
